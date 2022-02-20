@@ -3,12 +3,13 @@ import express from 'express';
 import 'dotenv/config'
 import mongoose from 'mongoose';
 import webRouter from './routes';
+import cors from 'cors';
 
 // Initialize the express engine
 const app: express.Application = express();
 
 app.use(express.json());
-
+app.use(cors())
 const port = process.env.PORT||3300;
  
  app.use('/apis/',webRouter)
