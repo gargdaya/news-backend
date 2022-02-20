@@ -1,0 +1,38 @@
+[
+  {
+    "_id": {
+      "$oid": "621225c694c40ec5b25e8c20"
+    },
+    "name": "Tech"
+  },
+  {
+    "_id": {
+      "$oid": "621225c694c40ec5b25e8c21"
+    },
+    "name": "Ui"
+  },
+  {
+    "_id": {
+      "$oid": "621225c694c40ec5b25e8c22"
+    },
+    "name": "Ai"
+  },
+  {
+    "_id": {
+      "$oid": "621225c694c40ec5b25e8c23"
+    },
+    "name": "Marketing"
+  },
+  {
+    "_id": {
+      "$oid": "621225c694c40ec5b25e8c24"
+    },
+    "name": "Design"
+  },
+  {
+    "_id": {
+      "$oid": "621225c694c40ec5b25e8c25"
+    },
+    "name": "Testing"
+  }
+]
