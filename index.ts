@@ -1,5 +1,6 @@
 // Import the express in typescript file
 import express from 'express';
+import 'dotenv/config'
 import mongoose from 'mongoose';
 import webRouter from './routes';
 
@@ -8,8 +9,7 @@ const app: express.Application = express();
 
 app.use(express.json());
 
-// Take a port 3000 for running server.
-const port: number = 3300;
+const port = process.env.PORT||3300;
  
  app.use('/apis/',webRouter)
  app.use(express.static(__dirname + '/assets'));
