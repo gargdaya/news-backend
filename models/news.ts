@@ -1,7 +1,7 @@
 import * as mongoose from "mongoose";
-import { categorySchema } from "./category";
 
-export const category = mongoose.model("categories", categorySchema);
+
+
 
 const newsSchema = new mongoose.Schema(
   {

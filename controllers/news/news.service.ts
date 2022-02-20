@@ -1,4 +1,4 @@
-import { category, news } from "../../models/news";
+import { news } from "../../models/news";
 
 export const getAll = async () => {
   try {
@@ -18,7 +18,7 @@ export const filterNews = async (params) => {
       params.category !== ":category" ? params.category.split(",") : undefined;
     const author =
       params.author !== ":author" ? params.author.split(",") : undefined;
-    
+
     let newsList = [];
     if (categories && author) {
       newsList = await news
@@ -31,11 +31,17 @@ export const filterNews = async (params) => {
         .populate("category")
         .populate("author", "userName")
         .sort(`-${params.sortBy || "headline"}`);
-    } else {
+    } else if (categories || author) {
       newsList = await news
         .find({
           $or: [{ category: { $in: categories } }, { author: { $in: author } }],
         })
+        .populate("category")
+        .populate("author", "userName")
+        .sort(`-${params.sortBy || "headline"}`);
+    } else {
+      newsList = await news
+        .find({})
         .populate("category")
         .populate("author", "userName")
         .sort(`-${params.sortBy || "headline"}`);
