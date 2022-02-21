@@ -1,27 +1,13 @@
+import { param } from "express-validator";
 import { news } from "../../models/news";
 
-export const getAll = async () => {
+export const getAll = async (params) => {
+  
   try {
-    const data = await news
-      .find()
-      .populate("category")
-      .populate("author", "userName");
-    return data;
-  } catch (error) {
-    throw Error(error.message);
-  }
-};
-
-export const filterNews = async (params) => {
-  try {
-    const categories =
-      params.category !== ":category" ? params.category.split(",") : undefined;
-    const author =
-      params.author !== ":author" ? params.author.split(",") : undefined;
-
-    let newsList = [];
-    if (categories && author) {
-      newsList = await news
+    if (params.category && params.author) {
+      const categories = params.category.split(",");
+      const author = params.author.split(",");
+      return await news
         .find({
           $and: [
             { category: { $in: categories } },
@@ -31,23 +17,29 @@ export const filterNews = async (params) => {
         .populate("category")
         .populate("author", "userName")
         .sort(`-${params.sortBy || "headline"}`);
-    } else if (categories || author) {
-      newsList = await news
+    } else if (params.category || params.author) {
+      const categories =
+        params.category && params.category !== ""
+          ? params.category.split(",")
+          : undefined;
+      const author =
+        params.author && params.author !== ""
+          ? params.author.split(",")
+          : undefined;
+      return await news
         .find({
           $or: [{ category: { $in: categories } }, { author: { $in: author } }],
         })
         .populate("category")
         .populate("author", "userName")
         .sort(`-${params.sortBy || "headline"}`);
-    } else {
-      newsList = await news
-        .find({})
-        .populate("category")
-        .populate("author", "userName")
-        .sort(`-${params.sortBy || "headline"}`);
     }
-
-    return newsList;
+    const data = await news
+      .find()
+      .populate("category")
+      .populate("author", "userName")
+      .sort(`-${params.sortBy || "headline"}`);
+    return data;
   } catch (error) {
     throw Error(error.message);
   }

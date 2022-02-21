@@ -1,7 +1,6 @@
 import { Router } from "express";
 import {
   getAllCategories,
-  getFilteredNews,
   getNewsList,
   saveOrUpdateUser,
   
@@ -16,6 +15,6 @@ webRouter
   .route("/user")
   .put(upload.single("profile"), saveOrUpdateUser);
 webRouter.route("/news").get(getNewsList);
-webRouter.route("/news/:category?/:author?/:sortBy?").get(getFilteredNews);
+
 
 export default webRouter;
