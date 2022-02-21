@@ -197,25 +197,23 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/apis/news/:category/:author/:sortBy",
+					"raw": "{{BASE_URL}}/apis/news/?category=&author=Matt&sortBy=updatedAt",
 					"host": [
 						"{{BASE_URL}}"
 					],
 					"path": [
 						"apis",
 						"news",
-						":category",
-						":author",
-						":sortBy"
+						""
 					],
-					"variable": [
+					"query": [
 						{
 							"key": "category",
-							"value": "621225c694c40ec5b25e8c20,621225c694c40ec5b25e8c23"
+							"value": ""
 						},
 						{
 							"key": "author",
-							"value": "Alvin,Steve Jobs"
+							"value": "Matt"
 						},
 						{
 							"key": "sortBy",
