@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "463a6fcf-820e-4550-9b7c-f3783c555ee0",
+		"name": "News",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save user Details",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "profile",
+							"type": "file",
+							"src": "mo_v-viTx/red-g72efcf820_1280.jpg"
+						},
+						{
+							"key": "values",
+							"value": "{\"username\":\"Dayanand\",\"email\":\"dayanandgarg800@gmail.com\",\"password\":\"Lucknow\",\"dob\":\"2022-02-01\",\"time\":\"15:29\",\"maritalStatus\":\"Unmarried\",\"mobile\":\"7275850307\",\"gender\":\"Male\",\"language\":\"Hindi\",\"privacy\":true}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/apis/user",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"apis",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Save user Details",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profile",
+									"type": "file",
+									"src": "/C:/Users/Dayanand/Downloads/submarine-6487509_640.png"
+								},
+								{
+									"key": "values",
+									"value": "{\"username\":\"Dayanand\",\"email\":\"dayanandgarg800@gmail.com\",\"password\":\"Lucknow\",\"dob\":\"2022-02-01\",\"time\":\"15:29\",\"maritalStatus\":\"Unmarried\",\"mobile\":\"7275850307\",\"gender\":\"Male\",\"language\":\"Hindi\",\"privacy\":true}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/apis/user",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"apis",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "404"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"194-vk1FZCUs0EvoL7Av1J9r52z4mAw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Feb 2022 10:32:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User Profile Updated Successfully\",\n    \"data\": {\n        \"_id\": \"620db4d45cc48b38d04639a6\",\n        \"email\": \"dayanandgarg800@gmail.com\",\n        \"__v\": 0,\n        \"createdAt\": \"2022-02-17T02:37:08.065Z\",\n        \"dob\": \"2022-02-01\",\n        \"gender\": \"Male\",\n        \"language\": \"Hindi\",\n        \"maritalStatus\": \"Unmarried\",\n        \"mobile\": \"7275850307\",\n        \"time\": \"15:29\",\n        \"updatedAt\": \"2022-02-20T10:32:52.516Z\",\n        \"username\": \"Dayanand\",\n        \"profile\": \"1645353171967-submarine-6487509_640.png\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All News",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/apis/news",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"apis",
+						"news"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All News",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/apis/news",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"apis",
+								"news"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2373"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"945-B+C0LIkfmz3u7veraU/dKEq7ZDc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Feb 2022 12:57:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"6212230594c40ec5b25e8c1e\",\n            \"thumbnail\": \"tech3.jpg\",\n            \"headline\": \"Crypto-currency crimes have got too big for the US government to ignore\",\n            \"category\": {\n                \"_id\": \"621225c694c40ec5b25e8c20\",\n                \"name\": \"Tech\"\n            },\n            \"author\": \"Steve Jobs\",\n            \"content\": \"\",\n            \"createdAt\": \"2022-02-18T10:32:52.516Z\",\n            \"updatedAt\": \"2022-02-19T10:32:52.516Z\"\n        },\n        {\n            \"_id\": \"621224e094c40ec5b25e8c1f\",\n            \"thumbnail\": \"tech.jpg\",\n            \"headline\": \"If you think you are too small to make a difference, try sleeping with a mosquito\",\n            \"category\": {\n                \"_id\": \"621225c694c40ec5b25e8c20\",\n                \"name\": \"Tech\"\n            },\n            \"author\": \"Matt\",\n            \"content\": \"\",\n            \"createdAt\": \"2022-02-20T10:32:52.516Z\",\n            \"updatedAt\": \"2022-02-20T10:32:52.516Z\"\n        },\n        {\n            \"_id\": \"6212256402732a47f48bb68a\",\n            \"thumbnail\": \"tech2.jpg\",\n            \"headline\": \"\",\n            \"category\": {\n                \"_id\": \"621225c694c40ec5b25e8c20\",\n                \"name\": \"Tech\"\n            },\n            \"author\": \"Steve Jobs\",\n            \"content\": \"\",\n            \"createdAt\": \"2022-02-20T10:32:52.516Z\",\n            \"updatedAt\": \"2022-02-20T10:32:52.516Z\"\n        },\n        {\n            \"_id\": \"6212257302732a47f48bb68b\",\n            \"thumbnail\": \"ui.jpg\",\n            \"headline\": \"Writing Code is not so bad\",\n            \"category\": {\n                \"_id\": \"621225c694c40ec5b25e8c21\",\n                \"name\": \"Ui\"\n            },\n            \"author\": \"Steve Jobs\",\n            \"content\": \"\",\n            \"createdAt\": \"2022-02-20T10:32:52.516Z\",\n            \"updatedAt\": \"2022-02-20T10:32:52.516Z\"\n        },\n        {\n            \"_id\": \"6212257302732a47f48bb68c\",\n            \"thumbnail\": \"ai-1.jpg\",\n            \"headline\": \"It's not faith in technology, it's faith in peoples\",\n            \"category\": {\n                \"_id\": \"621225c694c40ec5b25e8c22\",\n                \"name\": \"Ai\"\n            },\n            \"author\": \"Christian\",\n            \"content\": \"\",\n            \"createdAt\": \"2022-02-20T10:32:52.516Z\",\n            \"updatedAt\": \"2022-02-20T10:32:52.516Z\"\n        },\n        {\n            \"_id\": \"6212257302732a47f48bb68d\",\n            \"thumbnail\": \"marketing1.jpg\",\n            \"headline\": \"Technology is a useful servant but a dangerous master\",\n            \"category\": {\n                \"_id\": \"621225c694c40ec5b25e8c23\",\n                \"name\": \"Marketing\"\n            },\n            \"author\": \"Alvin\",\n            \"content\": \"\",\n            \"createdAt\": \"2022-02-20T10:32:52.516Z\",\n            \"updatedAt\": \"2022-02-20T10:32:52.516Z\"\n        },\n        {\n            \"_id\": \"6212257302732a47f48bb68e\",\n            \"thumbnail\": \"testing.jpg\",\n            \"headline\": \"Innovation is the outcome of the habit, not a random act\",\n            \"category\": {\n                \"_id\": \"621225c694c40ec5b25e8c25\",\n                \"name\": \"Testing\"\n            },\n            \"author\": \"Alvin\",\n            \"content\": \"\",\n            \"createdAt\": \"2022-02-20T10:32:52.516Z\",\n            \"updatedAt\": \"2022-02-20T10:32:52.516Z\"\n        },\n        {\n            \"_id\": \"6212257302732a47f48bb68f\",\n            \"thumbnail\": \"design.jpg\",\n            \"headline\": \"Technology is best when it brings people together.\",\n            \"category\": {\n                \"_id\": \"621225c694c40ec5b25e8c24\",\n                \"name\": \"Design\"\n            },\n            \"author\": \"Alvin\",\n            \"content\": \"\",\n            \"createdAt\": \"2022-02-20T10:32:52.516Z\",\n            \"updatedAt\": \"2022-02-20T10:32:52.516Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Filtered News",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/apis/news/:category/:author/:sortBy",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"apis",
+						"news",
+						":category",
+						":author",
+						":sortBy"
+					],
+					"variable": [
+						{
+							"key": "category",
+							"value": "621225c694c40ec5b25e8c20,621225c694c40ec5b25e8c23"
+						},
+						{
+							"key": "author",
+							"value": "Alvin,Steve Jobs"
+						},
+						{
+							"key": "sortBy",
+							"value": "updatedAt"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Filtered News",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/apis/news/:category/:author/:sortBy",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"apis",
+								"news",
+								":category",
+								":author",
+								":sortBy"
+							],
+							"variable": [
+								{
+									"key": "category",
+									"value": "621225c694c40ec5b25e8c20,621225c694c40ec5b25e8c23"
+								},
+								{
+									"key": "author",
+									"value": "Alvin,Steve Jobs"
+								},
+								{
+									"key": "sortBy",
+									"value": "updatedAt"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "897"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"381-j/3xdgQ/8HVUkViZksQI8mwcSR0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Feb 2022 13:29:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"6212256402732a47f48bb68a\",\n            \"thumbnail\": \"tech2.jpg\",\n            \"headline\": \"\",\n            \"category\": {\n                \"_id\": \"621225c694c40ec5b25e8c20\",\n                \"name\": \"Tech\"\n            },\n            \"author\": \"Steve Jobs\",\n            \"content\": \"\",\n            \"createdAt\": \"2022-02-20T10:32:52.516Z\",\n            \"updatedAt\": \"2022-02-20T10:32:52.516Z\"\n        },\n        {\n            \"_id\": \"6212257302732a47f48bb68d\",\n            \"thumbnail\": \"marketing1.jpg\",\n            \"headline\": \"Technology is a useful servant but a dangerous master\",\n            \"category\": {\n                \"_id\": \"621225c694c40ec5b25e8c23\",\n                \"name\": \"Marketing\"\n            },\n            \"author\": \"Alvin\",\n            \"content\": \"\",\n            \"createdAt\": \"2022-02-20T10:32:52.516Z\",\n            \"updatedAt\": \"2022-02-20T10:32:52.516Z\"\n        },\n        {\n            \"_id\": \"6212230594c40ec5b25e8c1e\",\n            \"thumbnail\": \"tech3.jpg\",\n            \"headline\": \"Crypto-currency crimes have got too big for the US government to ignore\",\n            \"category\": {\n                \"_id\": \"621225c694c40ec5b25e8c20\",\n                \"name\": \"Tech\"\n            },\n            \"author\": \"Steve Jobs\",\n            \"content\": \"\",\n            \"createdAt\": \"2022-02-18T10:32:52.516Z\",\n            \"updatedAt\": \"2022-02-19T10:32:52.516Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/apis/categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"apis",
+						"categories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All categories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/apis/categories",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"apis",
+								"categories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "330"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"14a-a0mzzvyuuFUrjIveRbBBh5OkY/Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Feb 2022 02:57:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"621225c694c40ec5b25e8c20\",\n            \"name\": \"Tech\"\n        },\n        {\n            \"_id\": \"621225c694c40ec5b25e8c21\",\n            \"name\": \"Ui\"\n        },\n        {\n            \"_id\": \"621225c694c40ec5b25e8c22\",\n            \"name\": \"Ai\"\n        },\n        {\n            \"_id\": \"621225c694c40ec5b25e8c23\",\n            \"name\": \"Marketing\"\n        },\n        {\n            \"_id\": \"621225c694c40ec5b25e8c24\",\n            \"name\": \"Design\"\n        },\n        {\n            \"_id\": \"621225c694c40ec5b25e8c25\",\n            \"name\": \"Testing\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
